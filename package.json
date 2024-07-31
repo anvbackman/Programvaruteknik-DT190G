@@ -1,0 +1,20 @@
+{
+  "name": "anba2205_project_backend_dt190g",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": " https://anba2205@bitbucket.org/miun_dt190g/anba2205_project_backend_dt190g.git"
+  },
+  "author": "Andreas Backman <anba2205@student.miun.se>",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonfile": "^6.1.0"
+  }
+}

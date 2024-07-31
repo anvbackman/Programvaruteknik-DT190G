@@ -1,0 +1,164 @@
+{
+    "pets": [
+      {
+        "name": "Bella",
+        "species": "Dog",
+        "breed": "Labrador",
+        "birthdate": "2018-05-20",
+        "healthStatus": "Healthy",
+        "ownerSsn": "19601131-5555"
+      },
+      {
+        "name": "Max",
+        "species": "Cat",
+        "breed": "Siamese",
+        "birthdate": "2017-08-15",
+        "healthStatus": "Healthy",
+        "ownerSsn": "19710815-1234"
+      },
+      {
+        "name": "Charlie",
+        "species": "Dog",
+        "breed": "Beagle",
+        "birthdate": "2019-11-10",
+        "healthStatus": "Healthy",
+        "ownerSsn": "19851110-5678"
+      },
+      {
+        "name": "Lucy",
+        "species": "Cat",
+        "breed": "Persian",
+        "birthdate": "2020-01-05",
+        "healthStatus": "Healthy",
+        "ownerSsn": "19900105-7890"
+      },
+      {
+        "name": "Daisy",
+        "species": "Rabbit",
+        "breed": "Dutch",
+        "birthdate": "2021-03-12",
+        "healthStatus": "Healthy",
+        "ownerSsn": "19750312-3456"
+      },
+      {
+        "name": "Oscar",
+        "species": "Dog",
+        "breed": "Bulldog",
+        "birthdate": "2016-07-22",
+        "healthStatus": "Healthy",
+        "ownerSsn": "19660722-4321"
+      },
+      {
+        "name": "Milo",
+        "species": "Cat",
+        "breed": "Maine Coon",
+        "birthdate": "2015-09-30",
+        "healthStatus": "Healthy",
+        "ownerSsn": "19850930-5678"
+      },
+      {
+        "name": "Luna",
+        "species": "Dog",
+        "breed": "Poodle",
+        "birthdate": "2014-12-25",
+        "healthStatus": "Healthy",
+        "ownerSsn": "19641225-6789"
+      },
+      {
+        "name": "Rocky",
+        "species": "Dog",
+        "breed": "Rottweiler",
+        "birthdate": "2013-04-18",
+        "healthStatus": "Healthy",
+        "ownerSsn": "19730418-7890"
+      },
+      {
+        "name": "Pocky",
+        "species": "Dog",
+        "breed": "Rottweiler",
+        "birthdate": "2013-04-18",
+        "healthStatus": "Sick",
+        "ownerSsn": "19730418-7890"
+      },
+      {
+        "name": "Molly",
+        "species": "Cat",
+        "breed": "Bengal",
+        "birthdate": "2012-06-14",
+        "healthStatus": "Healthy",
+        "ownerSsn": "19620614-8901"
+      }
+    ],
+    "owners": [
+      {
+        "name": "Anna Svensson",
+        "address": "Storgatan 1, 12345 Stockholm",
+        "phone": "070-1234567",
+        "email": "anna.svensson@example.com",
+        "ssn": "19601131-5555"
+      },
+      {
+        "name": "Erik Johansson",
+        "address": "Lillgatan 2, 54321 Göteborg",
+        "phone": "070-7654321",
+        "email": "erik.johansson@example.com",
+        "ssn": "19710815-1234"
+      },
+      {
+        "name": "Maria Andersson",
+        "address": "Västra Vägen 3, 67890 Malmö",
+        "phone": "070-9876543",
+        "email": "maria.andersson@example.com",
+        "ssn": "19851110-5678"
+      },
+      {
+        "name": "Lars Karlsson",
+        "address": "Östra Vägen 4, 98765 Uppsala",
+        "phone": "070-3456789",
+        "email": "lars.karlsson@example.com",
+        "ssn": "19900105-7890"
+      },
+      {
+        "name": "Eva Nilsson",
+        "address": "Södra Vägen 5, 45678 Linköping",
+        "phone": "070-2345678",
+        "email": "eva.nilsson@example.com",
+        "ssn": "19750312-3456"
+      },
+      {
+        "name": "Nils Eriksson",
+        "address": "Norra Vägen 6, 34567 Västerås",
+        "phone": "070-8765432",
+        "email": "nils.eriksson@example.com",
+        "ssn": "19660722-4321"
+      },
+      {
+        "name": "Karin Larsson",
+        "address": "Centralgatan 7, 23456 Örebro",
+        "phone": "070-5678901",
+        "email": "karin.larsson@example.com",
+        "ssn": "19850930-5678"
+      },
+      {
+        "name": "Olof Persson",
+        "address": "Huvudgatan 8, 12345 Helsingborg",
+        "phone": "070-6789012",
+        "email": "olof.persson@example.com",
+        "ssn": "19641225-6789"
+      },
+      {
+        "name": "Sara Olsson",
+        "address": "Sidogatan 9, 54321 Lund",
+        "phone": "070-7890123",
+        "email": "sara.olsson@example.com",
+        "ssn": "19730418-7890"
+      },
+      {
+        "name": "Göran Lindberg",
+        "address": "Bakgatan 10, 67890 Borås",
+        "phone": "070-8901234",
+        "email": "goran.lindberg@example.com",
+        "ssn": "19620614-8901"
+      }
+    ]
+  }
