@@ -53,6 +53,10 @@ app.get('/api/v1/pets/:name', function(req, res) {
     const name = req.params.name;
     const pets = petsFile.pets.find(pet => pet.name && pet.name.toLowerCase() === name.toLowerCase());
 
+    if (!pets) {
+        return res.status(404).json({ error: "Pet not found" });
+    }
+
     res.status(200).json(pets);
 });
 
@@ -68,4 +72,16 @@ app.get('/api/v1/owners/:ssn', function(req, res) {
     const result = { pets: pets };
 
     res.status(200).json(result);
+});
+
+app.get('/api/v1/owners', function(req, res) {
+    let owners = petsFile.owners.map(owner => {
+        return {
+            name: owner.name,
+            ssn: owner.ssn,
+            address: owner.address,
+            phone: owner.phone
+        };
+    });
+    res.status(200).json(owners);
 });
