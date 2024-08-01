@@ -118,4 +118,55 @@ app.post('/api/v1/pets', function(req, res) {
     }
 });
 
+app.put('/api/v1/pets/:name', function(req, res) {
+    const name = req.params.name;
+    const updatedPet = req.body;
+
+    // Validate the updated pet data
+    if (!updatedPet.name || !updatedPet.species || !updatedPet.breed || !updatedPet.birthdate || !updatedPet.healthStatus || !updatedPet.ownerSsn) {
+        return res.status(400).json({ error: 'Missing required pet information' });
+    }
+
+    // Find the pet by name (case-insensitive)
+    const petIndex = petsFile.pets.findIndex(pet => pet && pet.name && pet.name.toLowerCase() === name.toLowerCase());
+
+    if (petIndex === -1) {
+        return res.status(404).json({ error: 'Pet not found' });
+    }
+
+    // Update the pet information
+    petsFile.pets[petIndex] = updatedPet;
+
+    try {
+        // Write the updated data back to the JSON file
+        jsonfile.writeFileSync('database.json', petsFile, { spaces: 2 });
+        res.status(200).json(updatedPet);
+    } catch (error) {
+        console.error('Error writing to database.json:', error);
+        res.status(500).json({ error: 'Failed to save pet data' });
+    }
+});
+
+app.delete('/api/v1/pets/:name', function(req, res) {
+    const name = req.params.name;
+
+    // Find the pet by name (case-insensitive)
+    const petIndex = petsFile.pets.findIndex(pet => pet && pet.name && pet.name.toLowerCase() === name.toLowerCase());
+
+    if (petIndex === -1) {
+        return res.status(404).json({ error: 'Pet not found' });
+    }
+
+    // Remove the pet from the array
+    petsFile.pets.splice(petIndex, 1);
+
+    try {
+        // Write the updated data back to the JSON file
+        jsonfile.writeFileSync('database.json', petsFile, { spaces: 2 });
+        res.status(200).json({ message: 'Pet deleted successfully' });
+    } catch (error) {
+        console.error('Error writing to database.json:', error);
+        res.status(500).json({ error: 'Failed to save pet data' });
+    }
+});
 

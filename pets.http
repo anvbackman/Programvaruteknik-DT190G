@@ -33,6 +33,7 @@ GET {{url}}/pets/Dog
 ###############################################
 POST {{url}}/pets HTTP/1.1
 Content-Type: application/json
+
 {
   "name": "Skunken",
   "species": "Dog",
@@ -42,3 +43,10 @@ Content-Type: application/json
   "ownerSsn": "19730418-7890"
 }
 
+###############################################
+PUT {{url}}/pets/Skunken HTTP/1.1
+Content-Type: application/json
+
+{
+  "healthStatus": "Sick",
+}

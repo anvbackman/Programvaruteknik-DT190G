@@ -90,14 +90,6 @@
     },
     null,
     {
-      "name": "Skunken",
-      "species": "Dog",
-      "breed": "Golden Retriever",
-      "birthdate": "2000-05-05",
-      "healthStatus": "Healthy",
-      "ownerSsn": "19730418-7890"
-    },
-    {
       "name": "John D",
       "species": "Dog",
       "breed": "Gray hound",
