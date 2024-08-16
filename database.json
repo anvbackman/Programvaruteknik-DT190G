@@ -96,6 +96,14 @@
       "birthdate": "0001-01-01",
       "healthStatus": "Healthy",
       "ownerSsn": "20009999-9999"
+    },
+    {
+      "name": "test",
+      "species": "test",
+      "breed": "test",
+      "birthdate": "2024-08-14",
+      "healthStatus": "Healthy",
+      "ownerSsn": "20009999-9999"
     }
   ],
   "owners": [

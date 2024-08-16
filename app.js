@@ -60,20 +60,20 @@ app.get('/api/v1/pets', function(req, res) {
         });
 
     res.status(200).json(pets);
-        
 });
-        
+
 app.get('/api/v1/pets/:name', function(req, res) {
     const name = req.params.name;
-    const pets = petsFile.pets.find(pet => pet.name && pet.name.toLowerCase() === name.toLowerCase());
+    const pet = petsFile.pets.find(pet => pet.name && pet.name.toLowerCase() === name.toLowerCase());
 
-    if (!pets) {
+    if (!pet) {
         return res.status(404).json({ error: "Pet not found" });
     }
 
-    res.status(200).json(pets);
+    res.status(200).json(pet);
 });
 
+// Endpoint to get pets by owner's SSN
 app.get('/api/v1/owners/:ssn', function(req, res) {
     const ssn = req.params.ssn;
     const owner = petsFile.owners.find(owner => owner.ssn && owner.ssn === ssn);
@@ -82,19 +82,21 @@ app.get('/api/v1/owners/:ssn', function(req, res) {
         return res.status(404).json({ error: "Owner not found" });
     }
     
-    const pets = petsFile.pets.filter(pet => pet.ownerSsn === ssn);
-    const result = { pets: pets };
+    const pets = petsFile.pets.filter(pet => pet && pet.ownerSsn === ssn);
+    
 
-    res.status(200).json(result);
+    res.status(200).json(pets);
 });
 
+// Endpoint to get all owners
 app.get('/api/v1/owners', function(req, res) {
     let owners = petsFile.owners.map(owner => {
         return {
             name: owner.name,
-            ssn: owner.ssn,
             address: owner.address,
-            phone: owner.phone
+            phone: owner.phone,
+            email: owner.email,
+            ssn: owner.ssn
         };
     });
     res.status(200).json(owners);
