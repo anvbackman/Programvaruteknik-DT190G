@@ -104,6 +104,22 @@
       "birthdate": "2024-08-14",
       "healthStatus": "Healthy",
       "ownerSsn": "20009999-9999"
+    },
+    {
+      "name": "andreas102333",
+      "species": "Dog",
+      "breed": "Gray hound",
+      "birthdate": "2024-08-06",
+      "healthStatus": "Healthy",
+      "ownerSsn": "11112222-3333"
+    },
+    {
+      "name": "John Doeaa",
+      "species": "a",
+      "breed": "a",
+      "birthdate": "2024-08-06",
+      "healthStatus": "test",
+      "ownerSsn": "12335646-5566"
     }
   ],
   "owners": [

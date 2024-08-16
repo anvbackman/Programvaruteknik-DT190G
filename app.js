@@ -73,6 +73,7 @@ app.get('/api/v1/pets/:name', function(req, res) {
     res.status(200).json(pet);
 });
 
+
 // Endpoint to get pets by owner's SSN
 app.get('/api/v1/owners/:ssn', function(req, res) {
     const ssn = req.params.ssn;
@@ -83,6 +84,7 @@ app.get('/api/v1/owners/:ssn', function(req, res) {
     }
     
     const pets = petsFile.pets.filter(pet => pet && pet.ownerSsn === ssn);
+    const result = { pets: pets };
     
 
     res.status(200).json(pets);
