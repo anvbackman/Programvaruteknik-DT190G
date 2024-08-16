@@ -27,7 +27,10 @@ try {
 }
 
 // Add CORS middleware to server, allowing it to handle cross-origin requests
-app.use(cors());
+app.use(cors({
+    origin: 'http://127.0.0.1:5500',
+    credentials: true
+}));
 
 // Start server, binding it to specified port
 app.listen(port, function() {
@@ -124,12 +127,7 @@ app.post('/api/v1/pets', function(req, res) {
 
 app.put('/api/v1/pets/:name', function(req, res) {
     const name = req.params.name;
-    const updatedPet = req.body;
-
-    // Validate the updated pet data
-    if (!updatedPet.name || !updatedPet.species || !updatedPet.breed || !updatedPet.birthdate || !updatedPet.healthStatus || !updatedPet.ownerSsn) {
-        return res.status(400).json({ error: 'Missing required pet information' });
-    }
+    const updatedPetData = req.body;
 
     // Find the pet by name (case-insensitive)
     const petIndex = petsFile.pets.findIndex(pet => pet && pet.name && pet.name.toLowerCase() === name.toLowerCase());
@@ -138,7 +136,11 @@ app.put('/api/v1/pets/:name', function(req, res) {
         return res.status(404).json({ error: 'Pet not found' });
     }
 
-    // Update the pet information
+    // Merge the existing pet data with the updated data
+    const existingPet = petsFile.pets[petIndex];
+    const updatedPet = { ...existingPet, ...updatedPetData };
+
+    // Update the pet information in the array
     petsFile.pets[petIndex] = updatedPet;
 
     try {
@@ -151,6 +153,7 @@ app.put('/api/v1/pets/:name', function(req, res) {
     }
 });
 
+
 app.delete('/api/v1/pets/:name', function(req, res) {
     const name = req.params.name;
 
@@ -162,15 +165,16 @@ app.delete('/api/v1/pets/:name', function(req, res) {
     }
 
     // Remove the pet from the array
-    petsFile.pets.splice(petIndex, 1);
+    const removedPet = petsFile.pets.splice(petIndex, 1)[0];
 
     try {
         // Write the updated data back to the JSON file
         jsonfile.writeFileSync('database.json', petsFile, { spaces: 2 });
-        res.status(200).json({ message: 'Pet deleted successfully' });
+        res.status(200).json(removedPet);
     } catch (error) {
         console.error('Error writing to database.json:', error);
         res.status(500).json({ error: 'Failed to save pet data' });
     }
 });
+
 

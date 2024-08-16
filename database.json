@@ -1,14 +1,6 @@
 {
   "pets": [
     {
-      "name": "Bella",
-      "species": "Dog",
-      "breed": "Labrador",
-      "birthdate": "2018-05-20",
-      "healthStatus": "Healthy",
-      "ownerSsn": "19601131-5555"
-    },
-    {
       "name": "Max",
       "species": "Cat",
       "breed": "Siamese",
@@ -33,14 +25,6 @@
       "ownerSsn": "19900105-7890"
     },
     {
-      "name": "Daisy",
-      "species": "Rabbit",
-      "breed": "Dutch",
-      "birthdate": "2021-03-12",
-      "healthStatus": "Healthy",
-      "ownerSsn": "19750312-3456"
-    },
-    {
       "name": "Oscar",
       "species": "Dog",
       "breed": "Bulldog",
@@ -55,14 +39,6 @@
       "birthdate": "2015-09-30",
       "healthStatus": "Healthy",
       "ownerSsn": "19850930-5678"
-    },
-    {
-      "name": "Luna",
-      "species": "Dog",
-      "breed": "Poodle",
-      "birthdate": "2014-12-25",
-      "healthStatus": "Healthy",
-      "ownerSsn": "19641225-6789"
     },
     {
       "name": "Rocky",
@@ -90,22 +66,6 @@
     },
     null,
     {
-      "name": "t",
-      "species": "t",
-      "breed": "t",
-      "birthdate": "0001-01-01",
-      "healthStatus": "Healthy",
-      "ownerSsn": "20009999-9999"
-    },
-    {
-      "name": "test",
-      "species": "test",
-      "breed": "test",
-      "birthdate": "2024-08-14",
-      "healthStatus": "Healthy",
-      "ownerSsn": "20009999-9999"
-    },
-    {
       "name": "andreas102333",
       "species": "Dog",
       "breed": "Gray hound",
@@ -114,12 +74,12 @@
       "ownerSsn": "11112222-3333"
     },
     {
-      "name": "John Doeaa",
-      "species": "a",
-      "breed": "a",
-      "birthdate": "2024-08-06",
-      "healthStatus": "test",
-      "ownerSsn": "12335646-5566"
+      "name": "Skunken",
+      "species": "Dog",
+      "breed": "Golden Retriever",
+      "birthdate": "2000-05-05",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19730418-7890"
     }
   ],
   "owners": [
