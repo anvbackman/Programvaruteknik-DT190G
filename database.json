@@ -78,7 +78,7 @@
       "species": "Dog",
       "breed": "Golden Retriever",
       "birthdate": "2000-05-05",
-      "healthStatus": "Healthy",
+      "healthStatus": "Sick",
       "ownerSsn": "19730418-7890"
     }
   ],
