@@ -90,10 +90,10 @@
     },
     null,
     {
-      "name": "John D",
-      "species": "Dog",
-      "breed": "Gray hound",
-      "birthdate": "1111-11-11",
+      "name": "t",
+      "species": "t",
+      "breed": "t",
+      "birthdate": "0001-01-01",
       "healthStatus": "Healthy",
       "ownerSsn": "20009999-9999"
     }
