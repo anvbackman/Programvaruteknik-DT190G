@@ -1,19 +1,11 @@
 {
   "pets": [
     {
-      "petName": "Max",
-      "species": "Cat",
-      "breed": "Siamese",
-      "birthdate": "2017-08-15",
-      "healthStatus": "Healthy",
-      "ownerSsn": "19710815-1234"
-    },
-    {
       "petName": "Charlie",
       "species": "Dog",
       "breed": "Beagle",
       "birthdate": "2019-11-10",
-      "healthStatus": "Sick",
+      "healthStatus": "Healthy",
       "ownerSsn": "19851110-5678"
     },
     {
@@ -95,86 +87,6 @@
       "birthdate": "2024-08-14",
       "healthStatus": "b",
       "ownerSsn": "19850930-5678"
-    },
-    {
-      "petName": "a",
-      "species": "d",
-      "breed": "s",
-      "birthdate": "2024-07-31",
-      "healthStatus": "test",
-      "ownerSsn": "19850930-5678"
-    },
-    {
-      "petName": "a",
-      "species": "d",
-      "breed": "s",
-      "birthdate": "2024-07-31",
-      "healthStatus": "test",
-      "ownerSsn": "19850930-5678"
-    },
-    {
-      "petName": "s",
-      "species": "a",
-      "breed": "a",
-      "birthdate": "2024-08-07",
-      "healthStatus": "Healthy",
-      "ownerSsn": "19850930-5678"
-    },
-    {
-      "petName": "s",
-      "species": "a",
-      "breed": "a",
-      "birthdate": "2024-08-07",
-      "healthStatus": "Healthy",
-      "ownerSsn": "19850930-5678"
-    },
-    {
-      "petName": "s",
-      "species": "a",
-      "breed": "a",
-      "birthdate": "2024-08-07",
-      "healthStatus": "Healthy",
-      "ownerSsn": "19850930-5678"
-    },
-    {
-      "petName": "s",
-      "species": "a",
-      "breed": "a",
-      "birthdate": "2024-08-07",
-      "healthStatus": "Healthy",
-      "ownerSsn": "19850930-5678"
-    },
-    {
-      "petName": "x",
-      "species": "x",
-      "breed": "x",
-      "birthdate": "2024-08-06",
-      "healthStatus": "Healthy",
-      "ownerSsn": "19850930-5678"
-    },
-    {
-      "petName": "x",
-      "species": "x",
-      "breed": "x",
-      "birthdate": "2024-08-06",
-      "healthStatus": "Healthy",
-      "ownerSsn": "19850930-5678"
-    },
-    {
-      "petName": "x",
-      "species": "x",
-      "breed": "x",
-      "birthdate": "2024-08-06",
-      "healthStatus": "a",
-      "ownerSsn": "19850930-5678"
-    },
-    {
-      "petName": "a",
-      "species": "a",
-      "breed": "a",
-      "birthdate": "2024-07-31",
-      "healthStatus": "a",
-      "ownerSsn": "22"
     }
   ],
   "owners": [

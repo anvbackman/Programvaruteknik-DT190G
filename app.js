@@ -176,11 +176,18 @@ app.put('/api/v1/pets/:name', function(req, res) {
 
 
 
-app.delete('/api/v1/pets/:name', function(req, res) {
-    const name = req.params.petName;
+app.delete('/api/v1/pets/:petName/:ownerSsn', function(req, res) {
+    const petName = req.params.petName;
+    const ownerSsn = req.params.ownerSsn;
 
-    // Find the pet by name (case-insensitive)
-    const petIndex = petsFile.pets.findIndex(pet => pet && pet.petName && pet.petName.toLowerCase() === name.toLowerCase());
+    // Find the pet by name and ownerSsn (case-insensitive)
+    const petIndex = petsFile.pets.findIndex(pet => 
+        pet && 
+        pet.petName && 
+        pet.ownerSsn && 
+        pet.petName.toLowerCase() === petName.toLowerCase() && 
+        pet.ownerSsn === ownerSsn
+    );
 
     if (petIndex === -1) {
         return res.status(404).json({ error: 'Pet not found' });

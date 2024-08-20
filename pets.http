@@ -62,5 +62,5 @@ Content-Type: application/json
 }
 
 ###############################################
-DELETE {{url}}/pets/Skunken
+DELETE {{url}}/pets/Max/19710815-1234
 
