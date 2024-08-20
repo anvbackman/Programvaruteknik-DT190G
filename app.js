@@ -53,7 +53,7 @@ app.get('/api/v1/pets', function(req, res) {
         .filter(pet => pet !== null) // Filter out null values
         .map(pet => {
             return {
-                name: pet.name,
+                petName: pet.petName,
                 species: pet.species,
                 breed: pet.breed,
                 birthdate: pet.birthdate,
@@ -65,9 +65,9 @@ app.get('/api/v1/pets', function(req, res) {
     res.status(200).json(pets);
 });
 
-app.get('/api/v1/pets/:name', function(req, res) {
-    const name = req.params.name;
-    const pet = petsFile.pets.find(pet => pet.name && pet.name.toLowerCase() === name.toLowerCase());
+app.get('/api/v1/pets/:petName', function(req, res) {
+    const name = req.params.petName;
+    const pet = petsFile.pets.find(pet => pet.petName && pet.petName.toLowerCase() === name.toLowerCase());
 
     if (!pet) {
         return res.status(404).json({ error: "Pet not found" });
@@ -78,9 +78,9 @@ app.get('/api/v1/pets/:name', function(req, res) {
 
 
 // Endpoint to get pets by owner's SSN
-app.get('/api/v1/owners/:ssn', function(req, res) {
-    const ssn = req.params.ssn;
-    const owner = petsFile.owners.find(owner => owner.ssn && owner.ssn === ssn);
+app.get('/api/v1/owners/:ownerSsn', function(req, res) {
+    const ssn = req.params.ownerSsn;
+    const owner = petsFile.owners.find(owner => owner.ownerSsn && owner.ownerSsn === ssn);
     
     if (!owner) {
         return res.status(404).json({ error: "Owner not found" });
@@ -97,20 +97,23 @@ app.get('/api/v1/owners/:ssn', function(req, res) {
 app.get('/api/v1/owners', function(req, res) {
     let owners = petsFile.owners.map(owner => {
         return {
-            name: owner.name,
+            ownerName: owner.ownerName,
             address: owner.address,
             phone: owner.phone,
             email: owner.email,
-            ssn: owner.ssn
+            ownerSsn: owner.ownerSsn
         };
     });
     res.status(200).json(owners);
 });
 
 app.post('/api/v1/pets', function(req, res) {
-    const newPet = req.body;
+    const newPet = req.body.petName;
 
-    if (!newPet.name || !newPet.species || !newPet.breed || !newPet.birthdate || !newPet.healthStatus || !newPet.ownerSsn) {
+    // Log the incoming request body for debugging
+    console.log('Incoming Pet Data:', newPet);
+
+    if (!newPet.petName || !newPet.species || !newPet.breed || !newPet.birthdate || !newPet.healthStatus || !newPet.ownerSsn) {
         return res.status(400).json({ error: 'Missing required pet information' });
     }
 
@@ -125,12 +128,30 @@ app.post('/api/v1/pets', function(req, res) {
     }
 });
 
+app.post('/api/v1/owners', function(req, res) {
+    const newOwner = req.body.ownerName;
+
+    if (!newOwner.ownerName || !newOwner.address || !newOwner.phone || !newOwner.email || !newOwner.ownerSsn) {
+        return res.status(400).json({ error: 'Missing required owner information' });
+    }
+
+    petsFile.owners.push(newOwner);
+
+    try {
+        jsonfile.writeFileSync('database.json', petsFile, { spaces: 2 });
+        res.status(201).json(newOwner);
+    } catch (error) {
+        console.error('Error writing to database.json:', error);
+        res.status(500).json({ error: 'Failed to save owner data' });
+    }
+});
+
 app.put('/api/v1/pets/:name', function(req, res) {
     const name = req.params.name;
     const updatedPetData = req.body;
 
     // Find the pet by name (case-insensitive)
-    const petIndex = petsFile.pets.findIndex(pet => pet && pet.name && pet.name.toLowerCase() === name.toLowerCase());
+    const petIndex = petsFile.pets.findIndex(pet => pet && pet.petName && pet.petName.toLowerCase() === name.toLowerCase());
 
     if (petIndex === -1) {
         return res.status(404).json({ error: 'Pet not found' });
@@ -154,11 +175,12 @@ app.put('/api/v1/pets/:name', function(req, res) {
 });
 
 
+
 app.delete('/api/v1/pets/:name', function(req, res) {
-    const name = req.params.name;
+    const name = req.params.petName;
 
     // Find the pet by name (case-insensitive)
-    const petIndex = petsFile.pets.findIndex(pet => pet && pet.name && pet.name.toLowerCase() === name.toLowerCase());
+    const petIndex = petsFile.pets.findIndex(pet => pet && pet.petName && pet.petName.toLowerCase() === name.toLowerCase());
 
     if (petIndex === -1) {
         return res.status(404).json({ error: 'Pet not found' });

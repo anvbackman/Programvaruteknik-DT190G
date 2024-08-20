@@ -1,7 +1,7 @@
 {
   "pets": [
     {
-      "name": "Max",
+      "petName": "Max",
       "species": "Cat",
       "breed": "Siamese",
       "birthdate": "2017-08-15",
@@ -9,15 +9,15 @@
       "ownerSsn": "19710815-1234"
     },
     {
-      "name": "Charlie",
+      "petName": "Charlie",
       "species": "Dog",
       "breed": "Beagle",
       "birthdate": "2019-11-10",
-      "healthStatus": "Healthy",
+      "healthStatus": "Sick",
       "ownerSsn": "19851110-5678"
     },
     {
-      "name": "Lucy",
+      "petName": "Lucy",
       "species": "Cat",
       "breed": "Persian",
       "birthdate": "2020-01-05",
@@ -25,7 +25,7 @@
       "ownerSsn": "19900105-7890"
     },
     {
-      "name": "Oscar",
+      "petName": "Oscar",
       "species": "Dog",
       "breed": "Bulldog",
       "birthdate": "2016-07-22",
@@ -33,7 +33,7 @@
       "ownerSsn": "19660722-4321"
     },
     {
-      "name": "Milo",
+      "petName": "Milo",
       "species": "Cat",
       "breed": "Maine Coon",
       "birthdate": "2015-09-30",
@@ -41,117 +41,254 @@
       "ownerSsn": "19850930-5678"
     },
     {
-      "name": "Rocky",
-      "species": "Dog",
-      "breed": "Rottweiler",
-      "birthdate": "2013-04-18",
-      "healthStatus": "Healthy",
-      "ownerSsn": "19730418-7890"
-    },
-    {
-      "name": "Pocky",
-      "species": "Dog",
-      "breed": "Rottweiler",
-      "birthdate": "2013-04-18",
-      "healthStatus": "Sick",
-      "ownerSsn": "19730418-7890"
-    },
-    {
-      "name": "Molly",
-      "species": "Cat",
-      "breed": "Bengal",
-      "birthdate": "2012-06-14",
-      "healthStatus": "Healthy",
-      "ownerSsn": "19620614-8901"
-    },
-    null,
-    {
-      "name": "andreas102333",
-      "species": "Dog",
-      "breed": "Gray hound",
-      "birthdate": "2024-08-06",
-      "healthStatus": "Healthy",
-      "ownerSsn": "11112222-3333"
-    },
-    {
-      "name": "Skunken",
+      "petName": "Skunken",
       "species": "Dog",
       "breed": "Golden Retriever",
       "birthdate": "2000-05-05",
       "healthStatus": "Sick",
       "ownerSsn": "19730418-7890"
+    },
+    {
+      "petName": "a",
+      "species": "a",
+      "breed": "a",
+      "birthdate": "2024-08-06",
+      "healthStatus": "a",
+      "ownerSsn": "20009999-9999"
+    },
+    {
+      "petName": "b",
+      "species": "b",
+      "breed": "b",
+      "birthdate": "2024-08-08",
+      "healthStatus": "b",
+      "ownerSsn": "19951012-6666"
+    },
+    {
+      "petName": "Struts",
+      "species": "Dog",
+      "breed": "Pincher",
+      "birthdate": "2024-08-06",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19850930-5678"
+    },
+    {
+      "petName": "test",
+      "species": "a",
+      "breed": "a",
+      "birthdate": "2024-07-30",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19850930-5678"
+    },
+    {
+      "petName": "test",
+      "species": "a",
+      "breed": "a",
+      "birthdate": "2024-07-30",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19850930-5678"
+    },
+    {
+      "petName": "b",
+      "species": "b",
+      "breed": "b",
+      "birthdate": "2024-08-14",
+      "healthStatus": "b",
+      "ownerSsn": "19850930-5678"
+    },
+    {
+      "petName": "a",
+      "species": "d",
+      "breed": "s",
+      "birthdate": "2024-07-31",
+      "healthStatus": "test",
+      "ownerSsn": "19850930-5678"
+    },
+    {
+      "petName": "a",
+      "species": "d",
+      "breed": "s",
+      "birthdate": "2024-07-31",
+      "healthStatus": "test",
+      "ownerSsn": "19850930-5678"
+    },
+    {
+      "petName": "s",
+      "species": "a",
+      "breed": "a",
+      "birthdate": "2024-08-07",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19850930-5678"
+    },
+    {
+      "petName": "s",
+      "species": "a",
+      "breed": "a",
+      "birthdate": "2024-08-07",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19850930-5678"
+    },
+    {
+      "petName": "s",
+      "species": "a",
+      "breed": "a",
+      "birthdate": "2024-08-07",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19850930-5678"
+    },
+    {
+      "petName": "s",
+      "species": "a",
+      "breed": "a",
+      "birthdate": "2024-08-07",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19850930-5678"
+    },
+    {
+      "petName": "x",
+      "species": "x",
+      "breed": "x",
+      "birthdate": "2024-08-06",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19850930-5678"
+    },
+    {
+      "petName": "x",
+      "species": "x",
+      "breed": "x",
+      "birthdate": "2024-08-06",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19850930-5678"
+    },
+    {
+      "petName": "x",
+      "species": "x",
+      "breed": "x",
+      "birthdate": "2024-08-06",
+      "healthStatus": "a",
+      "ownerSsn": "19850930-5678"
+    },
+    {
+      "petName": "a",
+      "species": "a",
+      "breed": "a",
+      "birthdate": "2024-07-31",
+      "healthStatus": "a",
+      "ownerSsn": "22"
     }
   ],
   "owners": [
     {
-      "name": "Anna Svensson",
+      "ownerName": "Anna Svensson",
       "address": "Storgatan 1, 12345 Stockholm",
       "phone": "070-1234567",
       "email": "anna.svensson@example.com",
-      "ssn": "19601131-5555"
+      "ownerSsn": "19601131-5555"
     },
     {
-      "name": "Erik Johansson",
+      "ownerName": "Erik Johansson",
       "address": "Lillgatan 2, 54321 Göteborg",
       "phone": "070-7654321",
       "email": "erik.johansson@example.com",
-      "ssn": "19710815-1234"
+      "ownerSsn": "19710815-1234"
     },
     {
-      "name": "Maria Andersson",
+      "ownerName": "Maria Andersson",
       "address": "Västra Vägen 3, 67890 Malmö",
       "phone": "070-9876543",
       "email": "maria.andersson@example.com",
-      "ssn": "19851110-5678"
+      "ownerSsn": "19851110-5678"
     },
     {
-      "name": "Lars Karlsson",
+      "ownerName": "Lars Karlsson",
       "address": "Östra Vägen 4, 98765 Uppsala",
       "phone": "070-3456789",
       "email": "lars.karlsson@example.com",
-      "ssn": "19900105-7890"
+      "ownerSsn": "19900105-7890"
     },
     {
-      "name": "Eva Nilsson",
+      "ownerName": "Eva Nilsson",
       "address": "Södra Vägen 5, 45678 Linköping",
       "phone": "070-2345678",
       "email": "eva.nilsson@example.com",
-      "ssn": "19750312-3456"
+      "ownerSsn": "19750312-3456"
     },
     {
-      "name": "Nils Eriksson",
+      "ownerName": "Nils Eriksson",
       "address": "Norra Vägen 6, 34567 Västerås",
       "phone": "070-8765432",
       "email": "nils.eriksson@example.com",
-      "ssn": "19660722-4321"
+      "ownerSsn": "19660722-4321"
     },
     {
-      "name": "Karin Larsson",
+      "ownerName": "Karin Larsson",
       "address": "Centralgatan 7, 23456 Örebro",
       "phone": "070-5678901",
       "email": "karin.larsson@example.com",
-      "ssn": "19850930-5678"
+      "ownerSsn": "19850930-5678"
     },
     {
-      "name": "Olof Persson",
+      "ownerName": "Olof Persson",
       "address": "Huvudgatan 8, 12345 Helsingborg",
       "phone": "070-6789012",
       "email": "olof.persson@example.com",
-      "ssn": "19641225-6789"
+      "ownerSsn": "19641225-6789"
     },
     {
-      "name": "Sara Olsson",
+      "ownerName": "Sara Olsson",
       "address": "Sidogatan 9, 54321 Lund",
       "phone": "070-7890123",
       "email": "sara.olsson@example.com",
-      "ssn": "19730418-7890"
+      "ownerSsn": "19730418-7890"
     },
     {
-      "name": "Göran Lindberg",
+      "ownerName": "Göran Lindberg",
       "address": "Bakgatan 10, 67890 Borås",
       "phone": "070-8901234",
       "email": "goran.lindberg@example.com",
-      "ssn": "19620614-8901"
+      "ownerSsn": "19620614-8901"
+    },
+    {
+      "ownerName": "Kalle Kula",
+      "address": "Kallebacken 1",
+      "phone": "070-1234567",
+      "email": "k.kula@mail.com",
+      "ownerSsn": "12345678-1234"
+    },
+    {
+      "ownerName": "Kalle Kula",
+      "address": "Kallebacken 1",
+      "phone": "070-1234567",
+      "email": "k.kula@mail.com",
+      "ownerSsn": "12345678-1234"
+    },
+    {
+      "ownerName": "Kalle Kula",
+      "address": "Kallebacken 1",
+      "phone": "070-1234567",
+      "email": "k.kula@mail.com",
+      "ownerSsn": "12345678-1234"
+    },
+    {
+      "ownerName": "Kalle Kula",
+      "address": "Kallebacken 1",
+      "phone": "070-1234567",
+      "email": "k.kula@mail.com",
+      "ownerSsn": "12345678-1234"
+    },
+    {
+      "ownerName": "b",
+      "address": "b",
+      "phone": "b",
+      "email": "b",
+      "ownerSsn": "19951012-6666"
+    },
+    {
+      "ownerName": "a",
+      "address": "a",
+      "phone": "a",
+      "email": "a",
+      "ownerSsn": "22"
     }
   ]
 }
