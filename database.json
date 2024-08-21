@@ -39,33 +39,6 @@
       "birthdate": "2024-08-06",
       "healthStatus": "Sick",
       "ownerSsn": "19850930-5678"
-    },
-    {
-      "petName": "Skunken",
-      "species": "Dog",
-      "breed": "Golden Retriever",
-      "color": "White Cream",
-      "birthdate": "2000-05-05",
-      "healthStatus": "Healthy",
-      "ownerSsn": "19730418-7890"
-    },
-    {
-      "petName": "Skunken",
-      "species": "Dog",
-      "breed": "Golden Retriever",
-      "color": "White Cream",
-      "birthdate": "2000-05-05",
-      "healthStatus": "Healthy",
-      "ownerSsn": "19730418-7890"
-    },
-    {
-      "petName": "Skunken",
-      "species": "Dog",
-      "breed": "Golden Retriever",
-      "color": "White Cream",
-      "birthdate": "2000-05-05",
-      "healthStatus": "Healthy",
-      "ownerSsn": "19730418-7890"
     }
   ],
   "owners": [
@@ -201,6 +174,13 @@
       "phone": "s",
       "email": "s",
       "ownerSsn": "s"
+    },
+    {
+      "ownerName": "Kalle Kula",
+      "address": "Kallebacken 1",
+      "phone": "070-1234567",
+      "email": "k.kula@mail.com",
+      "ownerSsn": "12345678-1234"
     }
   ]
 }

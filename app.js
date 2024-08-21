@@ -91,7 +91,7 @@ app.get('/api/v1/owners/:ownerSsn', function(req, res) {
     const result = { pets: pets };
     
 
-    res.status(200).json(pets);
+    res.status(200).json(result);
 });
 
 // Endpoint to get all owners

@@ -6,10 +6,7 @@
 
 ###############################################
 
-// Test: Get all miun courses
-// Expected HTTP response status code: 200
-// Expected response: an array (json) with all courses (including subject for each course)
-// [{}, {}, ...]
+// Test: Get all pets
 GET {{url}}/pets
 
 ###############################################
@@ -18,17 +15,16 @@ GET {{url}}/pets
 GET {{url}}/pets/Lucy
 
 ###############################################
-// Test: Get all pets of an owner
-GET {{url}}/owners/19851110-5678
 
+// Test: Get all pets of an owner
+GET {{url}}/owners/19850930-5678
 
 ###############################################
+
 GET {{url}}/owners
 
 ###############################################
-GET {{url}}/pets/Dog
 
-###############################################
 POST {{url}}/pets HTTP/1.1
 Content-Type: application/json
 
@@ -43,6 +39,7 @@ Content-Type: application/json
 }
 
 ###############################################
+
 POST {{url}}/owners HTTP/1.1
 Content-Type: application/json
 
@@ -55,6 +52,7 @@ Content-Type: application/json
 }
 
 ###############################################
+
 PUT {{url}}/pets/Skunken HTTP/1.1
 Content-Type: application/json
 
@@ -63,5 +61,6 @@ Content-Type: application/json
 }
 
 ###############################################
-DELETE {{url}}/pets/Max/19710815-1234
+
+DELETE {{url}}/pets/Skunken/19730418-7890
 
