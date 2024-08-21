@@ -56,6 +56,7 @@ app.get('/api/v1/pets', function(req, res) {
                 petName: pet.petName,
                 species: pet.species,
                 breed: pet.breed,
+                color: pet.color,
                 birthdate: pet.birthdate,
                 healthStatus: pet.healthStatus,
                 ownerSsn: pet.ownerSsn
@@ -108,12 +109,12 @@ app.get('/api/v1/owners', function(req, res) {
 });
 
 app.post('/api/v1/pets', function(req, res) {
-    const newPet = req.body.petName;
+    const newPet = req.body;
 
     // Log the incoming request body for debugging
     console.log('Incoming Pet Data:', newPet);
 
-    if (!newPet.petName || !newPet.species || !newPet.breed || !newPet.birthdate || !newPet.healthStatus || !newPet.ownerSsn) {
+    if (!newPet.petName || !newPet.species || !newPet.breed || !newPet.color || !newPet.birthdate || !newPet.healthStatus || !newPet.ownerSsn) {
         return res.status(400).json({ error: 'Missing required pet information' });
     }
 
@@ -129,7 +130,7 @@ app.post('/api/v1/pets', function(req, res) {
 });
 
 app.post('/api/v1/owners', function(req, res) {
-    const newOwner = req.body.ownerName;
+    const newOwner = req.body;
 
     if (!newOwner.ownerName || !newOwner.address || !newOwner.phone || !newOwner.email || !newOwner.ownerSsn) {
         return res.status(400).json({ error: 'Missing required owner information' });

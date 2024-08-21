@@ -36,6 +36,7 @@ Content-Type: application/json
   "petName": "Skunken",
   "species": "Dog",
   "breed": "Golden Retriever",
+  "color": "White Cream",
   "birthdate": "2000-05-05",
   "healthStatus": "Healthy",
   "ownerSsn": "19730418-7890"
