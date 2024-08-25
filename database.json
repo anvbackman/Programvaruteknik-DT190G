@@ -4,6 +4,7 @@
       "petName": "Charlie",
       "species": "Dog",
       "breed": "Beagle",
+      "color": "Brown",
       "birthdate": "2019-11-10",
       "healthStatus": "Healthy",
       "ownerSsn": "19851110-5678"
@@ -12,6 +13,7 @@
       "petName": "Lucy",
       "species": "Cat",
       "breed": "Persian",
+      "color": "White",
       "birthdate": "2020-01-05",
       "healthStatus": "Healthy",
       "ownerSsn": "19900105-7890"
@@ -20,6 +22,7 @@
       "petName": "Oscar",
       "species": "Dog",
       "breed": "Bulldog",
+      "color": "Brindle",
       "birthdate": "2016-07-22",
       "healthStatus": "Healthy",
       "ownerSsn": "19660722-4321"
@@ -28,6 +31,7 @@
       "petName": "Milo",
       "species": "Cat",
       "breed": "Maine Coon",
+      "color": "Gray",
       "birthdate": "2015-09-30",
       "healthStatus": "Sick",
       "ownerSsn": "19850930-5678"
@@ -36,9 +40,145 @@
       "petName": "Struts",
       "species": "Dog",
       "breed": "Pincher",
+      "color": "Black and Tan",
       "birthdate": "2024-08-06",
       "healthStatus": "Sick",
       "ownerSsn": "19850930-5678"
+    },
+    {
+      "petName": "Bella",
+      "species": "Dog",
+      "breed": "Labrador",
+      "color": "Yellow",
+      "birthdate": "2021-03-12",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19750312-3456"
+    },
+    {
+      "petName": "Max",
+      "species": "Dog",
+      "breed": "Poodle",
+      "color": "White",
+      "birthdate": "2022-07-23",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19601131-5555"
+    },
+    {
+      "petName": "Nala",
+      "species": "Cat",
+      "breed": "Siamese",
+      "color": "Cream and Brown",
+      "birthdate": "2019-02-15",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19710815-1234"
+    },
+    {
+      "petName": "Rocky",
+      "species": "Dog",
+      "breed": "Boxer",
+      "color": "Fawn",
+      "birthdate": "2018-05-28",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19710815-1234"
+    },
+    {
+      "petName": "Daisy",
+      "species": "Cat",
+      "breed": "Ragdoll",
+      "color": "Blue Point",
+      "birthdate": "2020-11-04",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19641225-6789"
+    },
+    {
+      "petName": "Buddy",
+      "species": "Dog",
+      "breed": "Golden Retriever",
+      "color": "Golden",
+      "birthdate": "2017-04-18",
+      "healthStatus": "Sick",
+      "ownerSsn": "19791015-1122"
+    },
+    {
+      "petName": "Lola",
+      "species": "Cat",
+      "breed": "Bengal",
+      "color": "Spotted",
+      "birthdate": "2018-10-22",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19750312-3456"
+    },
+    {
+      "petName": "Shadow",
+      "species": "Dog",
+      "breed": "German Shepherd",
+      "color": "Black",
+      "birthdate": "2021-06-17",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19820708-3344"
+    },
+    {
+      "petName": "Molly",
+      "species": "Cat",
+      "breed": "Scottish Fold",
+      "color": "Gray",
+      "birthdate": "2019-09-09",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19641225-6789"
+    },
+    {
+      "petName": "Simba",
+      "species": "Cat",
+      "breed": "Sphynx",
+      "color": "Pinkish",
+      "birthdate": "2022-02-14",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19850930-5678"
+    },
+    {
+      "petName": "Zeus",
+      "species": "Dog",
+      "breed": "Rottweiler",
+      "color": "Black and Tan",
+      "birthdate": "2015-08-24",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19851110-5678"
+    },
+    {
+      "petName": "Luna",
+      "species": "Cat",
+      "breed": "Birman",
+      "color": "Seal Point",
+      "birthdate": "2016-12-13",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19900105-7890"
+    },
+    {
+      "petName": "Coco",
+      "species": "Dog",
+      "breed": "Chihuahua",
+      "color": "Chocolate",
+      "birthdate": "2017-01-11",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19820708-3344"
+    },
+    {
+      "petName": "Tiger",
+      "species": "Cat",
+      "breed": "Tabby",
+      "color": "Orange",
+      "birthdate": "2018-05-01",
+      "healthStatus": "Sick",
+      "ownerSsn": "19660722-4321"
+    },
+    {
+      "petName": "Rex",
+      "species": "Dog",
+      "breed": "Doberman",
+      "color": "Black",
+      "birthdate": "2023-03-19",
+      "healthStatus": "Healthy",
+      "ownerSsn": "19601131-5555"
     }
   ],
   "owners": [
@@ -99,88 +239,18 @@
       "ownerSsn": "19641225-6789"
     },
     {
-      "ownerName": "Sara Olsson",
-      "address": "Sidogatan 9, 54321 Lund",
-      "phone": "070-7890123",
-      "email": "sara.olsson@example.com",
-      "ownerSsn": "19730418-7890"
+      "ownerName": "Johan Bergström",
+      "address": "Skogsvägen 10, 56789 Borås",
+      "phone": "070-1239876",
+      "email": "johan.bergstrom@example.com",
+      "ownerSsn": "19791015-1122"
     },
     {
-      "ownerName": "Göran Lindberg",
-      "address": "Bakgatan 10, 67890 Borås",
-      "phone": "070-8901234",
-      "email": "goran.lindberg@example.com",
-      "ownerSsn": "19620614-8901"
-    },
-    {
-      "ownerName": "Kalle Kula",
-      "address": "Kallebacken 1",
-      "phone": "070-1234567",
-      "email": "k.kula@mail.com",
-      "ownerSsn": "12345678-1234"
-    },
-    {
-      "ownerName": "Kalle Kula",
-      "address": "Kallebacken 1",
-      "phone": "070-1234567",
-      "email": "k.kula@mail.com",
-      "ownerSsn": "12345678-1234"
-    },
-    {
-      "ownerName": "Kalle Kula",
-      "address": "Kallebacken 1",
-      "phone": "070-1234567",
-      "email": "k.kula@mail.com",
-      "ownerSsn": "12345678-1234"
-    },
-    {
-      "ownerName": "Kalle Kula",
-      "address": "Kallebacken 1",
-      "phone": "070-1234567",
-      "email": "k.kula@mail.com",
-      "ownerSsn": "12345678-1234"
-    },
-    {
-      "ownerName": "b",
-      "address": "b",
-      "phone": "b",
-      "email": "b",
-      "ownerSsn": "19951012-6666"
-    },
-    {
-      "ownerName": "a",
-      "address": "a",
-      "phone": "a",
-      "email": "a",
-      "ownerSsn": "22"
-    },
-    {
-      "ownerName": "Jens Jensson",
-      "address": "Strutsvägen 8",
-      "phone": "070-0000000",
-      "email": "mail@mail.se",
-      "ownerSsn": "20009999-9999"
-    },
-    {
-      "ownerName": "a",
-      "address": "a",
-      "phone": "a",
-      "email": "a",
-      "ownerSsn": "a"
-    },
-    {
-      "ownerName": "s",
-      "address": "s",
-      "phone": "s",
-      "email": "s",
-      "ownerSsn": "s"
-    },
-    {
-      "ownerName": "Kalle Kula",
-      "address": "Kallebacken 1",
-      "phone": "070-1234567",
-      "email": "k.kula@mail.com",
-      "ownerSsn": "12345678-1234"
+      "ownerName": "Elin Svensson",
+      "address": "Ängsvägen 11, 87654 Karlstad",
+      "phone": "070-9876123",
+      "email": "elin.svensson@example.com",
+      "ownerSsn": "19820708-3344"
     }
   ]
 }
