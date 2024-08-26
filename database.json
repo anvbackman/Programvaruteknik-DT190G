@@ -6,7 +6,7 @@
       "breed": "Beagle",
       "color": "Brown",
       "birthdate": "2019-11-10",
-      "healthStatus": "Healthy",
+      "healthStatus": "Recovering",
       "ownerSsn": "19851110-5678"
     },
     {
@@ -87,7 +87,7 @@
       "breed": "Ragdoll",
       "color": "Blue Point",
       "birthdate": "2020-11-04",
-      "healthStatus": "Healthy",
+      "healthStatus": "Sick",
       "ownerSsn": "19641225-6789"
     },
     {
@@ -251,6 +251,13 @@
       "phone": "070-9876123",
       "email": "elin.svensson@example.com",
       "ownerSsn": "19820708-3344"
+    },
+    {
+      "ownerName": "Jens Jensson",
+      "address": "Batterigränd 18",
+      "phone": "0767917475",
+      "email": "andreas.n.v.backman@hotmail.com",
+      "ownerSsn": "20009999-9999"
     }
   ]
 }

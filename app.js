@@ -2,21 +2,13 @@
 const express = require('express'); // for creating an Express server
 const cors = require('cors'); // for enabling CORS support
 const jsonfile = require('jsonfile'); // for reading/writing JSON files
-const bodyParser = require('body-parser');
-/**
- * The Express server instance.
- */
+// Create an Express server
 const app = express();
-app.use(bodyParser.json());
-/**
- * The port on which the Express server will listen for incoming requests.
- * Uses the environment variable PORT, if it exists, or defaults to 3000.
- */
+// Parse incoming request bodies as JSON
+app.use(express.json()); 
+// Define the port number for the server
 const port = process.env.PORT || 3000;
-
-/**
- * Read JSON and store into a variable
- */
+// Read the database file and store its contents in a variable
 let petsFile;
 
 try {
@@ -26,11 +18,7 @@ try {
     petsFile = { pets: [], owners: [] }; // Fallback to empty arrays
 }
 
-// Add CORS middleware to server, allowing it to handle cross-origin requests
-app.use(cors({
-    origin: 'http://127.0.0.1:5500',
-    credentials: true
-}));
+app.use(cors({credentials: true, origin: 'https://studenter.miun.se'}));
 
 // Start server, binding it to specified port
 app.listen(port, function() {
@@ -38,19 +26,23 @@ app.listen(port, function() {
     console.log(`Server is running on port ${port}`);
 });
 
-// Define a route for handling HTTP GET requests to root path
+/**
+ * Define a route for handling HTTP GET requests to root path
+ */
 app.get('/', function(req, res) {
     res.send('Backend is running');
 });
 
-
+/**
+ * Endpoint to get all pets 
+*/ 
 app.get('/api/v1/pets', function(req, res) {
-    if (!petsFile || !petsFile.pets) {
+    if (!petsFile || !petsFile.pets) { // Check if pets data is loaded
         return res.status(500).json({ error: 'Failed to load pets data' });
     }
-
+    // Filter out null values and return only the necessary fields
     let pets = petsFile.pets
-        .filter(pet => pet !== null) // Filter out null values
+        .filter(pet => pet !== null) 
         .map(pet => {
             return {
                 petName: pet.petName,
@@ -66,9 +58,12 @@ app.get('/api/v1/pets', function(req, res) {
     res.status(200).json(pets);
 });
 
+/**
+ * Endpoint to get a pet by name
+ */
 app.get('/api/v1/pets/:petName', function(req, res) {
     const name = req.params.petName;
-    const pet = petsFile.pets.find(pet => pet.petName && pet.petName.toLowerCase() === name.toLowerCase());
+    const pet = petsFile.pets.find(pet => pet.petName && pet.petName.toLowerCase() === name.toLowerCase()); // Find the pet by name (case-insensitive)
 
     if (!pet) {
         return res.status(404).json({ error: "Pet not found" });
@@ -77,25 +72,31 @@ app.get('/api/v1/pets/:petName', function(req, res) {
     res.status(200).json(pet);
 });
 
-
-// Endpoint to get pets by owner's SSN
+/**
+ * Endpoint to get all pets of a specific owner
+ */
 app.get('/api/v1/owners/:ownerSsn', function(req, res) {
     const ssn = req.params.ownerSsn;
-    const owner = petsFile.owners.find(owner => owner.ownerSsn && owner.ownerSsn === ssn);
+    const owner = petsFile.owners.find(owner => owner.ownerSsn && owner.ownerSsn === ssn); // Find the owner by ssn
     
     if (!owner) {
         return res.status(404).json({ error: "Owner not found" });
     }
     
-    const pets = petsFile.pets.filter(pet => pet && pet.ownerSsn === ssn);
+    const pets = petsFile.pets.filter(pet => pet && pet.ownerSsn === ssn); // Find the pets by owner's ssn
     const result = { pets: pets };
-    
 
     res.status(200).json(result);
 });
 
-// Endpoint to get all owners
+/**
+ * Endpoint to get all owners
+ */
 app.get('/api/v1/owners', function(req, res) {
+    if (!petsFile || !petsFile.owners) { // Check if owners data is loaded
+        return res.status(500).json({ error: 'Failed to load owners data' });
+    }
+
     let owners = petsFile.owners.map(owner => {
         return {
             ownerName: owner.ownerName,
@@ -108,12 +109,13 @@ app.get('/api/v1/owners', function(req, res) {
     res.status(200).json(owners);
 });
 
+/**
+ * Endpoint to post a new pet
+ */
 app.post('/api/v1/pets', function(req, res) {
     const newPet = req.body;
 
-    // Log the incoming request body for debugging
-    console.log('Incoming Pet Data:', newPet);
-
+    // Check if all required fields are present
     if (!newPet.petName || !newPet.species || !newPet.breed || !newPet.color || !newPet.birthdate || !newPet.healthStatus || !newPet.ownerSsn) {
         return res.status(400).json({ error: 'Missing required pet information' });
     }
@@ -129,9 +131,13 @@ app.post('/api/v1/pets', function(req, res) {
     }
 });
 
+/**
+ * Endpoint to post a new owner
+ */
 app.post('/api/v1/owners', function(req, res) {
     const newOwner = req.body;
 
+    // Check if all required fields are present
     if (!newOwner.ownerName || !newOwner.address || !newOwner.phone || !newOwner.email || !newOwner.ownerSsn) {
         return res.status(400).json({ error: 'Missing required owner information' });
     }
@@ -147,6 +153,9 @@ app.post('/api/v1/owners', function(req, res) {
     }
 });
 
+/**
+ * Endpoint to update a pets health status
+ */
 app.put('/api/v1/pets/:name', function(req, res) {
     const name = req.params.name;
     const updatedPetData = req.body;
@@ -154,6 +163,7 @@ app.put('/api/v1/pets/:name', function(req, res) {
     // Find the pet by name (case-insensitive)
     const petIndex = petsFile.pets.findIndex(pet => pet && pet.petName && pet.petName.toLowerCase() === name.toLowerCase());
 
+    // Check if the pet was not found
     if (petIndex === -1) {
         return res.status(404).json({ error: 'Pet not found' });
     }
@@ -176,7 +186,9 @@ app.put('/api/v1/pets/:name', function(req, res) {
 });
 
 
-
+/**
+ * Endpoint to delete a pet
+ */
 app.delete('/api/v1/pets/:petName/:ownerSsn', function(req, res) {
     const petName = req.params.petName;
     const ownerSsn = req.params.ownerSsn;
@@ -190,6 +202,7 @@ app.delete('/api/v1/pets/:petName/:ownerSsn', function(req, res) {
         pet.ownerSsn === ownerSsn
     );
 
+    // Check if the pet was not found
     if (petIndex === -1) {
         return res.status(404).json({ error: 'Pet not found' });
     }
