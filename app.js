@@ -1,3 +1,5 @@
+/* eslint-env node */
+
 // Import necessary modules
 const express = require('express'); // for creating an Express server
 const cors = require('cors'); // for enabling CORS support
@@ -18,6 +20,7 @@ try {
     petsFile = { pets: [], owners: [] }; // Fallback to empty arrays
 }
 
+// Enable CORS support for the server
 app.use(cors({credentials: true, origin: 'https://studenter.miun.se'}));
 
 // Start server, binding it to specified port
